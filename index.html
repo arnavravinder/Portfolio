@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arnav Ravinder - Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
     <header>
@@ -14,39 +15,82 @@
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#experiences">Experiences</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#community">Community</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <section id="about">
+    <section id="about" data-aos="fade-up">
         <h2>About Me</h2>
         <img src="your-image-url.jpg" alt="Arnav Ravinder" class="profile-img">
         <p>I am a 14-year-old self-taught coder from India with a passion for programming. Starting with Scratch, I developed a love for coding and explored web development with HTML, CSS, and JavaScript. I am proficient in Node.js and Discord bot development, and have knowledge of SQL for efficient data management. Currently, I am learning Flask, Firebase.js, and React.js to create dynamic projects. I have gained recognition on Scratch and engage in community outreach, raising funds for NGOs. Certified as a Google Python Developer and Digital Marketing Expert, I am pursuing Full Stack Developer certifications. With a drive to learn and create, I aspire to make a positive impact in the tech industry and bridge the digital divide through coding.</p>
     </section>
-    <section id="projects">
+    <section id="experiences" data-aos="fade-right">
+        <h2>Experiences</h2>
+        <div class="experience">
+            <h3>Google Python Developer</h3>
+            <p>I have been certified as a Google Python Developer, where I gained expertise in Python programming and its applications in various domains.</p>
+        </div>
+        <div class="experience">
+            <h3>Full Stack Developer</h3>
+            <p>I am currently pursuing Full Stack Developer certifications, enhancing my skills in front-end and back-end development.</p>
+        </div>
+        <div class="experience">
+            <h3>Digital Marketing Expert</h3>
+            <p>I am certified as a Digital Marketing Expert, which has helped me understand the importance of online presence and digital strategies.</p>
+        </div>
+    </section>
+    <section id="projects" data-aos="fade-up">
         <h2>Projects</h2>
-        <div class="project">
+        <div class="project" data-tilt>
             <h3>Virtual Reality Portfolio</h3>
             <img src="vr-portfolio-image.jpg" alt="Virtual Reality Portfolio">
             <p>A virtual reality portfolio project showcasing my work in an immersive environment.</p>
         </div>
-        <div class="project">
+        <div class="project" data-tilt>
             <h3>Quiz App</h3>
             <img src="quiz-app-image.jpg" alt="Quiz App">
             <p>A dynamic quiz application with features like auto progression, answer popups, and a dark/light mode toggle.</p>
         </div>
-        <div class="project">
+        <div class="project" data-tilt>
             <h3>Music App</h3>
             <img src="music-app-image.jpg" alt="Music App">
             <p>A music app that searches YouTube and plays the audio of selected videos, featuring a futuristic design and animations.</p>
         </div>
-        <div class="project">
+        <div class="project" data-tilt>
             <h3>Plateful</h3>
             <img src="plateful-image.jpg" alt="Plateful">
             <p>A landing page for Plateful, implementing TooGoodToGo's business model in India, with a customer and business dashboard for real-time communication.</p>
         </div>
     </section>
-    <section id="contact">
+    <section id="skills" data-aos="fade-left">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Node.js</li>
+            <li>Discord Bot Development</li>
+            <li>SQL</li>
+            <li>Flask</li>
+            <li>Firebase.js</li>
+            <li>React.js</li>
+        </ul>
+    </section>
+    <section id="certifications" data-aos="fade-right">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Google Python Developer</li>
+            <li>Full Stack Developer (in progress)</li>
+            <li>Digital Marketing Expert</li>
+        </ul>
+    </section>
+    <section id="community" data-aos="fade-up">
+        <h2>Community Involvement</h2>
+        <p>I have been actively involved in community outreach, teaching coding to government school kids without access to individual laptops through the Coding4Good sessions. Additionally, I have raised funds for NGOs, contributing to social causes through my technical skills.</p>
+    </section>
+    <section id="contact" data-aos="fade-left">
         <h2>Contact Me</h2>
         <form action="https://formspree.io/f/your-form-id" method="POST">
             <label for="name">Name:</label>
@@ -62,5 +106,17 @@
         <p>&copy; 2024 Arnav Ravinder</p>
         <p>Find me on <a href="https://in.linkedin.com/in/arnav-ravinder" target="_blank">LinkedIn</a></p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+        VanillaTilt.init(document.querySelectorAll(".project img"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
+    </script>
 </body>
 </html>

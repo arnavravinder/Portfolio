@@ -41,7 +41,7 @@ section {
     margin: 2rem 0;
 }
 
-#about, #projects, #contact {
+#about, #experiences, #projects, #skills, #certifications, #community, #contact {
     background-color: #f9f9f9;
     border-radius: 5px;
     padding: 1rem;
@@ -56,11 +56,11 @@ section {
     margin: 0 auto 1rem;
 }
 
-.project {
+.project, .experience {
     margin-bottom: 2rem;
 }
 
-.project img {
+.project img, .experience img {
     width: 100%;
     height: auto;
     border-radius: 5px;
@@ -79,4 +79,35 @@ footer {
 footer a {
     color: #2d9ee2;
     text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 0.5rem 0;
+}
+
+form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #279537;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
 }
